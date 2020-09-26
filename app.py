@@ -81,7 +81,7 @@ def background_process():
 	preds = gbm_model.predict_proba(x_test_tmp[features])
 
 	# get best quality prediction from original quality scale
-	predicted_quality_hash = {3: "LOW", 6: "MEDIUM", 9: "HIGH"}
+	predicted_quality_hash = {3: "Low", 6: "Medium", 9: "High"}
 
 	predicted_quality = [3,6,9][np.argmax(preds[0])]
 	predicted_quality_new = f"{predicted_quality_hash[predicted_quality]} ({predicted_quality})"
